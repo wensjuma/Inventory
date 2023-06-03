@@ -9,7 +9,7 @@ const responseHandler = require('../handleResponse');
 
 const TOKEN_SECRET = crypto.randomBytes(64).toString('base64');
 let authService = {};
-authService.getSession = (req, res, next) => {
+authService.getSession = (req, res, next) => {  
     // console.log(req.headers);
     const token = req.headers['authorization'].split(' ')[1];
     jsonToken.verify(token, TOKEN_SECRET, (err, user) => {

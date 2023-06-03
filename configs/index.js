@@ -5,5 +5,5 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
-setRoutes(app)
+setRoutes(app) 
 module.exports = app;
